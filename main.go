@@ -147,8 +147,9 @@ func (s *DB) Callback() *Callback {
 }
 
 // SetLogger replace default logger
-func (s *DB) SetLogger(log logger) {
+func (s *DB) SetLogger(log logger) *DB {
 	s.logger = log
+	return s
 }
 
 // LogMode set log mode, `true` for detailed logs, `false` for no log, default, will only print error logs
